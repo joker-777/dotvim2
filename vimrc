@@ -75,7 +75,8 @@ set wildmenu			" Enhanced command line completion.
 set wildmode=list:longest	" Complete files like a shell.
 
 " Automatic fold settings for specific files. Uncomment to use.
-autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
 autocmd FileType scss  setlocal foldmethod=indent shiftwidth=2 tabstop=2
 
