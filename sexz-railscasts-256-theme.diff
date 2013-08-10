@@ -1,0 +1,24 @@
+diff --git a/colors/sexy-railscasts-256.vim b/colors/sexy-railscasts-256.vim
+index dc71f08..b495692 100644
+--- a/colors/sexy-railscasts-256.vim
++++ b/colors/sexy-railscasts-256.vim
+@@ -19,7 +19,8 @@ hi link htmlTag                     xmlTag
+ hi link htmlTagName                 xmlTagName
+ hi link htmlEndTag                  xmlEndTag
+ 
+-highlight Normal                    guifg=#E6E1DC guibg=#222222
++" highlight Normal                    guifg=#E6E1DC guibg=#222222
++highlight Normal					guifg=#e3e0d7 ctermbg=234 guibg=#242424	ctermfg=252	cterm=none gui=none
+ highlight Cursor                    guifg=#000000 ctermfg=0 guibg=#FFFFFF ctermbg=15  
+ highlight CursorLine                guibg=#333435 ctermbg=237 cterm=NONE
+ highlight CursorColumn              guibg=#333435 ctermbg=237 cterm=NONE
+@@ -35,7 +36,8 @@ highlight Identifier                guifg=#6D9CBE ctermfg=73 gui=NONE cterm=NONE
+ highlight Include                   guifg=#CC7833 ctermfg=173 gui=NONE cterm=NONE
+ highlight PreCondit                 guifg=#CC7833 ctermfg=173 gui=NONE cterm=NONE
+ highlight Keyword                   guifg=#CC7833 ctermfg=173 cterm=NONE
+-highlight LineNr                    guifg=#2B2B2B ctermfg=236 ctermbg=233 guibg=#C0C0FF
++" highlight LineNr                    guifg=#2B2B2B ctermfg=236 ctermbg=233 guibg=#C0C0FF
++highlight LineNr					guifg=#857b6f ctermfg=241 ctermbg=232 guibg=#080808	cterm=none gui=none
+ highlight Number                    guifg=#A5C261 ctermfg=107
+ highlight VertSplit                 guifg=#383838 guibg=#383838 ctermfg=236 ctermbg=236
+ highlight Directory                 guifg=#A5C261 gui=NONE ctermfg=107

@@ -6,7 +6,10 @@ set nocompatible      		" We're running Vim, not Vi!
 filetype plugin indent on	" Turn on file type detection.
 syntax on			" Turn on syntax highlighting.
 
-colorscheme railscasts
+" set t_Co=256
+colorscheme sexy-railscasts-256
+" colorscheme wombat256mod
+" color codeschool
 
 set tabstop=4       " Number of spaces that a <Tab> in the file counts for.
  
@@ -26,6 +29,8 @@ set showmatch       " When a bracket is inserted, briefly jump to the matching
 
 set incsearch       " While typing a search command, show immediately where the
                     " so far typed pattern matches.
+
+set hlsearch		" highlights all search results
  
 set ignorecase      " Ignore case in search patterns.
  
@@ -60,7 +65,7 @@ set formatoptions=c,q,r,t " This is a sequence of letters which describes how
 set ruler           " Show the line and column number of the cursor position,
                     " separated by a comma.
 
-set background=dark " When set to "dark", Vim will try to use colors that look
+" set background=dark  When set to "dark", Vim will try to use colors that look
                     " good on a dark background. When set to "light", Vim will
                     " try to use colors that look good on a light background.
                     " Any other value is illegal.
@@ -79,6 +84,7 @@ autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
 autocmd FileType scss  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+autocmd FileType js setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 
 autocmd FileType c  setlocal shiftwidth=2 tabstop=2
 autocmd FileType cpp  setlocal shiftwidth=2 tabstop=2

@@ -1,0 +1,112 @@
+diff --git a/snippets/coffee.snippets b/snippets/coffee.snippets
+index 21c2cc3..3b25d9c 100644
+--- a/snippets/coffee.snippets
++++ b/snippets/coffee.snippets
+@@ -93,3 +93,37 @@ snippet req
+ # Export
+ snippet exp
+ 	${1:root} = exports ? this
++# jasmine
++snippet desc
++	describe '${1}', ->
++
++	  ${2}
++snippet bef
++	beforeEach ->
++	  ${1}
++snippet aft
++	afterEach ->
++	  ${1}
++snippet it
++	it '${1}', ->
++	  ${2}
++snippet exp
++	expect(${1}).to${2}(${3})
++snippet expe
++	expect(${1}).toEqual(${2})
++snippet expb
++	expect(${1}).toBe(${2})
++snippet expbt
++	expect(${1}).toBeTruthy()
++snippet expbf
++	expect(${1}).toBeFalthy()
++snippet expbn
++	expect(${1}).toBeNull()
++snippet expbu
++	expect(${1}).toBeUndefined()
++snippet exphc
++	expect(${1}).toHaveBeenCalled()
++snippet spy
++	spyOn(${1}, '${2}')
++snippet spyr
++	spyOn(${1}, '${2}').andReturn(${3})
+diff --git a/snippets/ruby.snippets b/snippets/ruby.snippets
+index 2c93448..4644ed3 100644
+--- a/snippets/ruby.snippets
++++ b/snippets/ruby.snippets
+@@ -557,7 +557,7 @@ snippet nam
+ 		${2}
+ 	end
+ snippet tas
+-	desc "${1:Task description}"
++	desc '${1:Task description}'
+ 	task :${2:task_name => [:dependent, :tasks]} do
+ 		${3}
+ 	end
+@@ -954,29 +954,33 @@ snippet tctss
+ #     Rspec snippets     #
+ ##########################
+ snippet desc
+-	describe ${1:class_name} do
++	describe '${1:class_name}' do
+ 		${2}
+ 	end
+ snippet descm
+-	describe "${1:#method}" do
++	describe '${1:#method}' do
+ 		${2:pending "Not implemented"}
+ 	end
+ snippet cont
+-	context "${1:message}" do
++	context '${1:message}' do
+ 		${2}
+ 	end
+ snippet bef
+-	before :${1:each} do
+-		${2}
++	before { ${1} }
++snippet before
++	before do
++		${1}
+ 	end
+ snippet aft
+-	after :${1:each} do
+-		${2}
++	after { ${1} }
++snippet after
++	after do
++		${1}
+ 	end
+ snippet let
+-	let(:${1:object}) ${2}
++	let(:${1:object}) { ${2} }
+ snippet let!
+-	let!(:${1:object}) ${2}
++	let!(:${1:object}) { ${2} }
+ snippet subj
+ 	subject { ${1} }
+ snippet s.
+@@ -992,11 +996,11 @@ snippet shared
+ snippet itb
+ 	it_behaves_like ${1:"shared examples name"}
+ snippet it
+-	it "${1:spec_name}" do
++	it '${1:spec_name}' do
+ 		${2}
+ 	end
+ snippet itp
+-	it "${1:spec_name}"
++	it '${1:spec_name}'
+ 	${2}
+ snippet its
+ 	its(:${1:method}) { should ${2} }
