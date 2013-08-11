@@ -1,0 +1,27 @@
+[url "git://anongit.kde.org/"]
+	insteadOf = kde:
+[url "git@git.kde.org:"]
+	pushInsteadOf = kde:
+[user]
+	name = JoKer
+	email = joker777vs.666@gmail.com
+[core]
+	editor = vim
+	excludesfile = /home/johannes/.gitignore
+[alias]
+	co = checkout
+    l = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+[color]
+	ui = true
+	diff = auto
+	status = auto
+	branch = auto
+[github]
+	user = joker--777
+	token = 7cb66360c50397f1763b22063b87e256
+[merge]
+	tool = fugitive
+[mergetool "fugitive"]
+	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+[web]
+	browser = firefox
