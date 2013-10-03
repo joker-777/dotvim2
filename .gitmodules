@@ -45,7 +45,7 @@
 	url = https://github.com/MarcWeber/vim-addon-mw-utils.git
 [submodule "bundle/vim-snippets"]
 	path = bundle/vim-snippets
-	url = git@github.com:honza/vim-snippets.git
+	url = git@github.com:joker-777/vim-snippets.git
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
 	url = git@github.com:tpope/vim-surround.git
@@ -58,9 +58,9 @@
 [submodule "bundle/vim-colors"]
 	path = bundle/vim-colors
 	url = git@github.com:dandorman/vim-colors.git
-[submodule "bundle/sexy-railscasts-256-theme"]
-	path = bundle/sexy-railscasts-256-theme
-	url = git@github.com:davidkariuki/sexy-railscasts-256-theme.git
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = git@github.com:hallison/vim-markdown.git
+[submodule "bundle/sexy-railscasts-256-theme"]
+	path = bundle/sexy-railscasts-256-theme
+	url = git@github.com:joker-777/sexy-railscasts-256-theme.git
