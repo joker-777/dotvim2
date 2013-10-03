@@ -5,8 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# alias ls='ls --color=auto' # linux
-alias ls='ls -G' # mac
+alias ls='ls --color=auto' # linux
+# alias ls='ls -G' # mac
 
 # PS1='[\u@\h \W]\$ '
 PS1="\[\033[1;44m\][\u@\h \W\$(git branch 2> /dev/null | grep -e '\* ' | sed 's/^..\(.*\)/\[\033[1;30;44m\]{\1}\[\033[1;37;44m\]/')]\[\033[0m\]\$ " # with git branch and different color 
