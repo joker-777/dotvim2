@@ -7,7 +7,7 @@
 	email = joker777vs.666@gmail.com
 [core]
 	editor = vim
-	excludesfile = /home/johannes/.gitignore
+	excludesfile = /home/johannes/.gitignore_global
 [alias]
 	co = checkout
     l = log --graph --all --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
@@ -22,6 +22,10 @@
 [merge]
 	tool = fugitive
 [mergetool "fugitive"]
-	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+	cmd = vim -f -c \"Gvdiff\" \"$MERGED\"
 [web]
 	browser = firefox
+[push]
+	default = simple
+[http]
+[https]

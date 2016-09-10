@@ -1,5 +1,5 @@
 -R
 --type-add=html=.inc,.rhtml,.erb,.haml,.inc
 --type-add=css=.scss,.less
---type-add=js=.coffee
+--type-add=js=.coffee,.erb
 --ignore-dir=tmp

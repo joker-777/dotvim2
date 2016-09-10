@@ -8,6 +8,9 @@ syntax on			" Turn on syntax highlighting.
 
 " set t_Co=256
 colorscheme sexy-railscasts-256
+" colorscheme solarized
+" let base16colorspace=256  " Access colors present in 256 colorspace
+" colorscheme base16-default
 " colorscheme wombat256mod
 " color codeschool
 
@@ -65,7 +68,7 @@ set formatoptions=c,q,r,t " This is a sequence of letters which describes how
 set ruler           " Show the line and column number of the cursor position,
                     " separated by a comma.
 
-" set background=dark  When set to "dark", Vim will try to use colors that look
+set background=dark  "When set to "dark", Vim will try to use colors that look
                     " good on a dark background. When set to "light", Vim will
                     " try to use colors that look good on a light background.
                     " Any other value is illegal.
@@ -81,10 +84,15 @@ set wildmode=list:longest	" Complete files like a shell.
 
 " Automatic fold settings for specific files. Uncomment to use.
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+autocmd FileType eruby setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+autocmd FileType markdown setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 autocmd FileType scss  setlocal foldmethod=indent shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+autocmd FileType less  setlocal foldmethod=indent shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+autocmd FileType html setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+autocmd FileType json setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 
 autocmd FileType c  setlocal shiftwidth=2 tabstop=2
 autocmd FileType cpp  setlocal shiftwidth=2 tabstop=2
@@ -92,10 +100,15 @@ autocmd FileType cpp  setlocal shiftwidth=2 tabstop=2
 " To get standard two-space indentation in CoffeeScript files
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
+au BufNewFile,BufRead *.prawn set filetype=ruby
+au BufNewFile,BufRead *.axlsx set filetype=ruby
+au BufNewFile,BufRead *.shaper set filetype=ruby
+
 " CtrlP
-let g:ctrlp_map = '<c-e>'
-let g:ctrlpmru_map = '<s-e>'
-map <S-e> :CtrlPMRU<cr>
+let g:ctrlp_map = '<c-f>'
+let g:ctrlpmru_map = '<s-f>'
+map <c-e> :Errors<cr>
+map <S-f> :CtrlPMRU<cr>
 
 " folding
 set foldmethod=indent
@@ -104,4 +117,15 @@ set nofoldenable
 set foldlevel=1
 
 inoremap <C-Space> <C-x><C-o>
-inoremap <C-@> <C-Space>
+inoremap <C-@> <C-Space
+" recommended by vim-less plugin
+nnoremap <Leader>m :w <BAR> !lessc % > %:t:r.css<CR><space>
+
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled=1
+let g:airline_theme='powerlineish'
+let g:airline#extensions#branch#enabled=1
+" let g:airline#extensions#ctrlp#color_template='visual' " insert (default), normal, visual, replace
+let g:syntastic_haml_checkers = ['haml_lint']
+let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_always_populate_loc_list = 1
