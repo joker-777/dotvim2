@@ -15,7 +15,7 @@ colorscheme sexy-railscasts-256
 " color codeschool
 
 set tabstop=4       " Number of spaces that a <Tab> in the file counts for.
- 
+
 set shiftwidth=4    " Number of spaces to use for each step of (auto)indent.
 
 set number          " Show line numbers.
@@ -34,9 +34,9 @@ set incsearch       " While typing a search command, show immediately where the
                     " so far typed pattern matches.
 
 set hlsearch		" highlights all search results
- 
+
 set ignorecase      " Ignore case in search patterns.
- 
+
 set smartcase       " Override the 'ignorecase' option if the search pattern
                     " contains upper case characters.
 
@@ -44,14 +44,14 @@ set backspace=2     " Influences the working of <BS>, <Del>, CTRL-W
                     " and CTRL-U in Insert mode. This is a list of items,
                     " separated by commas. Each item allows a way to backspace
                     " over something.
- 
+
 set autoindent      " Copy indent from current line when starting a new line
                     " (typing <CR> in Insert mode or when using the "o" or "O"
                     " command).
 
 set textwidth=79    " Maximum width of text that is being inserted. A longer
                     " line will be broken after white space to get this width.
- 
+
 set formatoptions=c,q,r,t " This is a sequence of letters which describes how
                     " automatic formatting is to be done.
                     "
@@ -61,7 +61,7 @@ set formatoptions=c,q,r,t " This is a sequence of letters which describes how
                     "           the current comment leader automatically.
                     " q         Allow formatting of comments with "gq".
                     " r         Automatically insert the current comment leader
-                    "           after hitting <Enter> in Insert mode. 
+                    "           after hitting <Enter> in Insert mode.
                     " t         Auto-wrap text using textwidth (does not apply
                     "           to comments)
 
@@ -129,3 +129,4 @@ let g:airline#extensions#branch#enabled=1
 let g:syntastic_haml_checkers = ['haml_lint']
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_coffee_coffeelint_args = "-f .coffeelint.json"
