@@ -3,3 +3,6 @@
 --type-add=css=.scss,.less
 --type-add=js=.coffee,.erb
 --ignore-dir=tmp
+--ignore-dir=log
+--ignore-dir=sphinx
+--ignore-file=match:/\.orig$/

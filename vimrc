@@ -92,7 +92,9 @@ autocmd FileType scss  setlocal foldmethod=indent shiftwidth=2 tabstop=2 softtab
 autocmd FileType less  setlocal foldmethod=indent shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 autocmd FileType html setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+autocmd FileType xhtml setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 autocmd FileType json setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 
 autocmd FileType c  setlocal shiftwidth=2 tabstop=2
 autocmd FileType cpp  setlocal shiftwidth=2 tabstop=2
@@ -130,3 +132,6 @@ let g:syntastic_haml_checkers = ['haml_lint']
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_coffee_coffeelint_args = "-f .coffeelint.json"
+
+syntax match nonascii "[^\x00-\x7F]"
+highlight nonascii guibg=Red ctermbg=2

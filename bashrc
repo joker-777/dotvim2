@@ -33,7 +33,7 @@ export BUNDLER_EDITOR=$EDITOR
 
 # To enable shims and autocompletion
 export PATH="~/.rbenv/shims:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+eval "$(rbenv init -)"
 
 # change console language to english
 export LANG='en_US.UTF-8'
