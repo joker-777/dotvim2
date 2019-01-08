@@ -5,6 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+tty -s && eval `keychain -q --eval $HOME/.ssh/id_rsa`
+
 alias ls='ls --color=auto' # linux
 # alias ls='ls -G' # mac
 
