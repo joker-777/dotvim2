@@ -43,3 +43,12 @@ export LANGUAGE='en_US.UTF-8:en'
 
 # always calls binary of the current node_modules location
 alias npm-exec='PATH=$(npm bin):$PATH'
+# for docker-compose in Kenhub
+export HOSTNAME=dev.kenhub.com
+export WEBPACK_DEV_SERVER_PORT=3035
+
+# android emulator
+export PATH="~/Android/Sdk/emulator/emulator:$PATH"
+
+# needed for expo
+export ANDROID_SDK=/home/johannes/Android/Sdk

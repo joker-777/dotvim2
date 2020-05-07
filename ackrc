@@ -5,4 +5,5 @@
 --ignore-dir=tmp
 --ignore-dir=log
 --ignore-dir=sphinx
+--ignore-dir=public/webpack
 --ignore-file=match:/\.orig$/

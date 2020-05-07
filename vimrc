@@ -49,7 +49,7 @@ set autoindent      " Copy indent from current line when starting a new line
                     " (typing <CR> in Insert mode or when using the "o" or "O"
                     " command).
 
-set textwidth=79    " Maximum width of text that is being inserted. A longer
+set textwidth=80    " Maximum width of text that is being inserted. A longer
                     " line will be broken after white space to get this width.
 
 set formatoptions=c,q,r,t " This is a sequence of letters which describes how
@@ -90,7 +90,7 @@ autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 autocmd FileType scss  setlocal foldmethod=indent shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 autocmd FileType less  setlocal foldmethod=indent shiftwidth=2 tabstop=2 softtabstop=2 expandtab
-autocmd FileType javascript setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
 autocmd FileType html setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 autocmd FileType xhtml setlocal shiftwidth=4 tabstop=4 softtabstop=4 expandtab
 autocmd FileType json setlocal shiftwidth=2 tabstop=2 softtabstop=2 expandtab
@@ -101,6 +101,8 @@ autocmd FileType cpp  setlocal shiftwidth=2 tabstop=2
 
 " To get standard two-space indentation in CoffeeScript files
 au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
+au BufNewFile,BufReadPost *.js setl shiftwidth=2 expandtab
+au BufNewFile,BufReadPost *.jsx setl shiftwidth=2 expandtab
 
 au BufNewFile,BufRead *.prawn set filetype=ruby
 au BufNewFile,BufRead *.axlsx set filetype=ruby
@@ -122,16 +124,60 @@ inoremap <C-Space> <C-x><C-o>
 inoremap <C-@> <C-Space
 " recommended by vim-less plugin
 nnoremap <Leader>m :w <BAR> !lessc % > %:t:r.css<CR><space>
+" imap <C-J> <Plug>snipMateNextOrTrigger
+
+" SnipMate
+let g:snipMate = {}
+let g:snipMate.snippet_version=1
 
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
 let g:airline_theme='powerlineish'
 let g:airline#extensions#branch#enabled=1
 " let g:airline#extensions#ctrlp#color_template='visual' " insert (default), normal, visual, replace
-let g:syntastic_haml_checkers = ['haml_lint']
-let g:syntastic_ruby_checkers = ['rubocop']
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_coffee_coffeelint_args = "-f .coffeelint.json"
+
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_loc_list_height = 5
+" let g:syntastic_auto_loc_list = 0
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 1
+"
+" let g:syntastic_error_symbol = '❌'
+" let g:syntastic_warning_symbol = '‼'
+" let g:syntastic_style_error_symbol = '⁉️'
+" let g:syntastic_style_warning_symbol = '💩'
+"
+" let g:syntastic_haml_checkers = ['haml_lint']
+" let g:syntastic_ruby_checkers = ['rubocop']
+" let g:syntastic_javascript_checkers = ['eslint']
+" let g:syntastic_coffee_checkers = ['eslint']
+" let g:syntastic_coffee_eslint_exec = "eslint"
+" let g:syntastic_javascript_eslint_exec = "eslint"
+
+" ale
+let g:ale_linters = {'javascript': ['eslint'], 'ruby': ['rubocop']}
+" 'javascript': ['eslint', 'prettier'],
+let g:ale_fixers = {
+\  '*': ['remove_trailing_lines', 'trim_whitespace'],
+\  'javascript': ['eslint'],
+\  'ruby': ['rubocop']
+\}
+let g:ale_fix_on_save = 0
+" let g:ale_fix_on_save = 1
+let g:airline#extensions#ale#enabled = 1
+let g:ale_javascript_eslint_executable = 'eslint'
+let g:ale_linter_aliases = {'coffee': 'javascript'}
+let g:ale_javascript_eslint_use_global = 1
+let g:ale_open_list = 0
+
+" vim-javascript
+let g:javascript_plugin_flow = 1
+
+" vim-jsx
+let g:jsx_ext_required = 0
 
 syntax match nonascii "[^\x00-\x7F]"
 highlight nonascii guibg=Red ctermbg=2
+
+" makes prettier-eslint-cli power the gq command for automatic formatting 
+autocmd FileType javascript set formatprg=prettier-eslint\ --eslint-config-path=/home/johannes/Work/kenhub/kenhub/.eslintrc.js\ --config=/home/johannes/Work/kenhub/kenhub/.prettierrc.js\ --stdin
