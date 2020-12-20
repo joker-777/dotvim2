@@ -30,3 +30,5 @@
 	default = simple
 [http]
 [https]
+[pull]
+	rebase = false
