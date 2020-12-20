@@ -5,7 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-tty -s && eval `keychain -q --eval $HOME/.ssh/id_rsa`
+# https://wiki.archlinux.org/index.php/SSH_keys#Installation
+eval `keychain -q --eval $HOME/.ssh/id_rsa`
 
 alias ls='ls --color=auto' # linux
 # alias ls='ls -G' # mac
@@ -34,8 +35,8 @@ export BUNDLER_EDITOR=$EDITOR
 # export HISTFILESIZE=2000
 
 # To enable shims and autocompletion
-export PATH="~/.rbenv/shims:$PATH"
-eval "$(rbenv init -)"
+# export PATH="~/.rbenv/shims:$PATH"
+# eval "$(rbenv init -)"
 
 # change console language to english
 export LANG='en_US.UTF-8'
