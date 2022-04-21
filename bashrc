@@ -1,7 +1,6 @@
 #
 # ~/.bashrc
 #
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -10,6 +9,7 @@ eval `keychain -q --eval $HOME/.ssh/id_rsa`
 
 alias ls='ls --color=auto' # linux
 # alias ls='ls -G' # mac
+alias dc='docker-compose $@'
 
 source '/usr/share/git/completion/git-prompt.sh'
 export GIT_PS1_SHOWDIRTYSTATE=true
@@ -36,7 +36,7 @@ export BUNDLER_EDITOR=$EDITOR
 
 # To enable shims and autocompletion
 # export PATH="~/.rbenv/shims:$PATH"
-# eval "$(rbenv init -)"
+eval "$(rbenv init -)"
 
 # change console language to english
 export LANG='en_US.UTF-8'
@@ -45,7 +45,7 @@ export LANGUAGE='en_US.UTF-8:en'
 # always calls binary of the current node_modules location
 alias npm-exec='PATH=$(npm bin):$PATH'
 # for docker-compose in Kenhub
-export HOSTNAME=dev.kenhub.com
+export HOSTNAME=localhost
 export WEBPACK_DEV_SERVER_PORT=3035
 
 # android emulator
@@ -53,3 +53,7 @@ export PATH="~/Android/Sdk/emulator/emulator:$PATH"
 
 # needed for expo
 export ANDROID_SDK=/home/johannes/Android/Sdk
+
+# https://wiki.archlinux.org/index.php/ruby#Setup
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$PATH:$GEM_HOME/bin"

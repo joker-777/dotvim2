@@ -2,8 +2,10 @@
 --type-add=html=.inc,.rhtml,.erb,.haml,.inc
 --type-add=css=.scss,.less
 --type-add=js=.coffee,.erb
+--ignore-dir=.expo
 --ignore-dir=tmp
 --ignore-dir=log
 --ignore-dir=sphinx
 --ignore-dir=public/webpack
+--ignore-dir=app/assets/builds
 --ignore-file=match:/\.orig$/
