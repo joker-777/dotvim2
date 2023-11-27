@@ -4,9 +4,6 @@
 [submodule "bundle/vim-sensible"]
 	path = bundle/vim-sensible
 	url = git@github.com:tpope/vim-sensible.git
-[submodule "bundle/vim-rails"]
-	path = bundle/vim-rails
-	url = git://github.com/tpope/vim-rails.git
 [submodule "bundle/vim-railscasts"]
 	path = bundle/vim-railscasts
 	url = git@github.com:jgdavey/vim-railscasts.git
@@ -16,9 +13,6 @@
 [submodule "bundle/vim-git"]
 	path = bundle/vim-git
 	url = git@github.com:tpope/vim-git.git
-[submodule "bundle/vim-ruby"]
-	path = bundle/vim-ruby
-	url = git://github.com/vim-ruby/vim-ruby.git
 [submodule "bundle/tcomment_vim"]
 	path = bundle/tcomment_vim
 	url = git@github.com:tomtom/tcomment_vim.git
@@ -28,9 +22,6 @@
 [submodule "bundle/vim-haml"]
 	path = bundle/vim-haml
 	url = git@github.com:tpope/vim-haml.git
-[submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive.git
 [submodule "bundle/vim-snipmate"]
 	path = bundle/vim-snipmate
 	url = git@github.com:garbas/vim-snipmate.git
@@ -97,12 +88,18 @@
 [submodule "bundle/vim-jsx"]
 	path = bundle/vim-jsx
 	url = https://github.com/mxw/vim-jsx.git
-[submodule "bundle/spacegray"]
-	path = bundle/spacegray
-	url = git://github.com/ajh17/Spacegray.vim
 [submodule "bundle/ale"]
 	path = bundle/ale
 	url = https://github.com/dense-analysis/ale.git
 [submodule "bundle/vim-js-arrow-function"]
 	path = bundle/vim-js-arrow-function
 	url = git@github.com:mvolkmann/vim-js-arrow-function.git
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule "bundle/vim-rails"]
+	path = bundle/vim-rails
+	url = git@github.com:tpope/vim-rails.git
+[submodule "bundle/vim-ruby"]
+	path = bundle/vim-ruby
+	url = git@github.com:vim-ruby/vim-ruby.git

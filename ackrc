@@ -8,4 +8,5 @@
 --ignore-dir=sphinx
 --ignore-dir=public/webpack
 --ignore-dir=app/assets/builds
+--ignore-dir=.yarn/releases
 --ignore-file=match:/\.orig$/
