@@ -48,12 +48,24 @@ alias npm-exec='PATH=$(npm bin):$PATH'
 export HOSTNAME=localhost
 export WEBPACK_DEV_SERVER_PORT=3035
 
-# android emulator
-export PATH="~/Android/Sdk/emulator/emulator:$PATH"
+# AndroidStudio
+export ANDROID_HOME=$HOME/Android/Sdk
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/tools
 
 # needed for expo
 export ANDROID_SDK=/home/johannes/Android/Sdk
 
+
+# webstorm
+export WEBIDE_JDK=/usr/lib/jvm/jre-jetbrains
+
+# commenting this out because it doesn't work with rbenv
 # https://wiki.archlinux.org/index.php/ruby#Setup
-export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
-export PATH="$PATH:$GEM_HOME/bin"
+# export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+# export PATH="$PATH:$GEM_HOME/bin"
+
+# Created by `pipx` on 2024-03-04 10:24:47
+export PATH="$PATH:/home/johannes/.local/bin"
