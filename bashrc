@@ -9,7 +9,7 @@ eval `keychain -q --eval $HOME/.ssh/id_rsa`
 
 alias ls='ls --color=auto' # linux
 # alias ls='ls -G' # mac
-alias dc='docker-compose $@'
+alias dc='docker compose $@'
 
 source '/usr/share/git/completion/git-prompt.sh'
 export GIT_PS1_SHOWDIRTYSTATE=true
@@ -36,7 +36,7 @@ export BUNDLER_EDITOR=$EDITOR
 
 # To enable shims and autocompletion
 # export PATH="~/.rbenv/shims:$PATH"
-eval "$(rbenv init -)"
+# eval "$(rbenv init -)"
 
 # change console language to english
 export LANG='en_US.UTF-8'

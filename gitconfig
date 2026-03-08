@@ -3,11 +3,12 @@
 [url "git@git.kde.org:"]
 	pushInsteadOf = kde:
 [user]
-	name = JoKer
 	email = joker777vs.666@gmail.com
+	name = Johannes Köhler
 [core]
 	editor = vim
 	excludesfile = /home/johannes/.gitignore_global
+	autocrlf = input
 [alias]
 	co = checkout
 	ci = commit
